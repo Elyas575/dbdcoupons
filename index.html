@@ -282,24 +282,11 @@
     const filterButtons = document.querySelectorAll(".filter-btn");
     const paginationContainer = document.getElementById("pagination");
     const toast = document.getElementById("toast");
-    const lastUpdatedElements = document.querySelectorAll(".last-updated-date");
-    
+
     let currentPage = 1;
     const itemsPerPage = 12;
     let currentFilter = "all";
     let currentSearchTerm = "";
-
-    // Set last updated date to current date
-    const currentDate = new Date();
-    const formattedDate = currentDate.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
-    });
-    
-    lastUpdatedElements.forEach(el => {
-      el.textContent = formattedDate;
-    });
 
     function renderCoupons(couponsToRender, page = 1) {
       couponGrid.innerHTML = "";
