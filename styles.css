@@ -268,13 +268,15 @@
     }
 
     .search-box {
+      width: 100%;
+      max-width: 400px;
       margin-bottom: 20px;
       position: relative;
-      max-width: 500px;
     }
 
     .search-box input {
       width: 100%;
+      box-sizing: border-box;
       padding: 12px 15px 12px 40px;
       border-radius: 5px;
       border: 1px solid #333;
@@ -404,4 +406,11 @@
       .coupon-grid { grid-template-columns: 1fr; }
       .hero h1 { font-size: 1.6rem; }
       .filters { flex-direction: column; }
+      .search-box {
+        max-width: 100%;
+      }
+      .search-box input {
+        font-size: 0.95rem;
+        padding: 10px 12px 10px 36px;
+      }
     }
