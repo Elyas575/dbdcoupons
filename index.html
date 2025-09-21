@@ -39,8 +39,23 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5027621324612932"
-     crossorigin="anonymous"></script>
+  <!-- AdSense loader gated by approval flag -->
+  <script>
+    // Toggle this to true once your site is approved to enable real ads
+    window.ADS_APPROVED = false;
+    if (window.ADS_APPROVED) {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5027621324612932';
+      s.crossOrigin = 'anonymous';
+      document.head.appendChild(s);
+    } else {
+      // Prevent errors from inline ad calls while disabled
+      window.adsbygoogle = window.adsbygoogle || [];
+      window.adsbygoogle.push = function(){};
+    }
+  </script>
+
 </head>
 <body>
 
