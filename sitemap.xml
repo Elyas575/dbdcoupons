@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
   <url>
     <loc>https://dbdcoupons.com/</loc>
     <lastmod>2025-09-19</lastmod>
     <priority>1.0</priority>
   </url>
+
+  <!-- Privacy Policy -->
   <url>
-    <loc>http://127.0.0.1:5500/#active-codes</loc>
+    <loc>https://dbdcoupons.com/privacy.html</loc>
     <lastmod>2025-09-19</lastmod>
-    <priority>0.9</priority>
+    <priority>0.5</priority>
   </url>
+
+  <!-- Terms of Service -->
   <url>
-    <loc>https://dbdcoupons.com/#how-to-redeem</loc>
+    <loc>https://dbdcoupons.com/terms.html</loc>
     <lastmod>2025-09-19</lastmod>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
+
+  <!-- Contact Us -->
   <url>
-    <loc>https://dbdcoupons.com/#faq</loc>
+    <loc>https://dbdcoupons.com/contact.html</loc>
     <lastmod>2025-09-19</lastmod>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 </urlset>
