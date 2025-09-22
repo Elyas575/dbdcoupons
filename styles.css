@@ -414,3 +414,13 @@
         padding: 10px 12px 10px 36px;
       }
     }
+
+
+    .external-links{
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .external-links li a{
+      color:var(--text);
+    }
