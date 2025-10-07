@@ -1372,6 +1372,13 @@
             renderCoupons(coupons);
             searchInput.addEventListener("input", searchCoupons);
         });
+
+
+
+        console.log('AdSense Status:');
+console.log('- Domain:', window.location.hostname);
+console.log('- AdsbyGoogle loaded:', typeof window.adsbygoogle !== 'undefined');
+console.log('- Ad containers found:', document.querySelectorAll('.adsbygoogle').length);
     </script>
 </body>
 </html>
