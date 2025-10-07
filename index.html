@@ -312,25 +312,23 @@
             document.head.appendChild(script);
         }
 
-            function initializeAdSlotsWithDelay() {
-                const adContainers = document.querySelectorAll('.adsbygoogle');
-                console.log(`Found ${adContainers.length} ad containers`);
-                
-                // Check if ads are already loaded
-                const alreadyLoaded = document.querySelector('.adsbygoogle[data-adsbygoogle-status]');
-                if (alreadyLoaded) {
-                    console.log('Ads already loaded, skipping re-initialization');
-                    return;
-                }
-                
-                // Load all ads at once
-                try {
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    console.log('Ads initialization started');
-                } catch (e) {
-                    console.error('Ad loading error:', e);
-                }
+        function initializeAdSlotsWithDelay() {
+            const adContainers = document.querySelectorAll('.adsbygoogle');
+            console.log(`Found ${adContainers.length} ad containers`);
+            
+            // Check if ads are already loaded
+            const alreadyLoaded = document.querySelector('.adsbygoogle[data-adsbygoogle-status]');
+            if (alreadyLoaded) {
+                console.log('Ads already loaded, skipping re-initialization');
+                return;
             }
+            try {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                console.log('Ads initialization started');
+            } catch (e) {
+                console.error('Ad loading error:', e);
+            }
+        }
         // Your existing coupon data and functionality remains the same
     const coupons = [
             { title: "Horror Attraction Banner", desc: "Exclusive event reward.", code: "NIGHTSHIFT", expires: "Sept 25, 2025", daysLeft: 7, usesToday: 326, type: "cosmetic" },
