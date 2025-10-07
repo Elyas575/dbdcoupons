@@ -1125,70 +1125,51 @@
     <div class="toast" id="toast">Code copied to clipboard!</div>
 
     <script>
-        // Ad Configuration
-        window.ADS_CONFIG = {
-            enabled: true,
-            clientId: 'ca-pub-5027621324612932',
-            adSlots: {
-                display: '5494268471',
-                inFeed: '7149081177',
-                multiplex: '6402260074'
-            }
-        };
-
-        function initializeAds() {
-            // Don't load real ads on localhost
-            if (window.location.hostname === 'localhost' || 
-                window.location.hostname === '127.0.0.1') {
-                
-                console.log('Running locally - showing ad placeholders');
-                showAdPlaceholders();
-                return;
-            }
-            
-            // Load real ads on production domain
-            if (window.ADS_CONFIG.enabled) {
-                loadGoogleAds();
-            } else {
-                showAdPlaceholders();
-            }
-        }
-
-        function showAdPlaceholders() {
-            document.querySelectorAll('.adsbygoogle').forEach((adSlot, index) => {
-                const slotId = adSlot.dataset.adSlot || 'unknown';
-                adSlot.innerHTML = `
-                    <div class="ad-placeholder">
-                        <i class="fas fa-ad"></i>
-                        <p>Google Ad Placeholder</p>
-                        <small>Slot: ${slotId} | Ads appear in production</small>
-                    </div>
-                `;
-            });
-        }
-
-        function loadGoogleAds() {
-            var script = document.createElement('script');
-            script.async = true;
-            script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + window.ADS_CONFIG.clientId;
-            script.crossOrigin = 'anonymous';
-            script.onload = function() {
-                console.log('Google Ads script loaded successfully');
-                // Initialize all ads after script loads
-                document.querySelectorAll('.adsbygoogle').forEach(adSlot => {
-                    try {
+    window.ADS_CONFIG = {
+        enabled: window.location.hostname === "dbdcoupons.com",
+        clientId: "ca-pub-5027621324612932"
+    };
+    function showAdPlaceholders() {
+        document.querySelectorAll('.adsbygoogle').forEach((adSlot, index) => {
+            const slotId = adSlot.dataset.adSlot || 'unknown';
+            adSlot.innerHTML = `
+                <div class="ad-placeholder">
+                    <i class="fas fa-ad"></i>
+                    <p>Google Ad Placeholder</p>
+                    <small>Slot: ${slotId} | Ads appear in production</small>
+                </div>
+            `;
+        });
+    }
+    function loadGoogleAds() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + window.ADS_CONFIG.clientId;
+        script.crossOrigin = 'anonymous';
+        script.onload = function() {
+            document.querySelectorAll('.adsbygoogle').forEach(adSlot => {
+                try {
+                    if (!adSlot.hasAttribute('data-adsbygoogle-status') && adSlot.offsetWidth >= 250 && adSlot.offsetHeight > 0) {
                         (adsbygoogle = window.adsbygoogle || []).push({});
-                    } catch (e) {
-                        console.error('Ad loading error:', e);
+                        adSlot.setAttribute('data-adsbygoogle-status', 'initialized');
                     }
-                });
-            };
-            script.onerror = function() {
-                console.error('Failed to load Google Ads script');
-                showAdPlaceholders();
-            };
-            document.head.appendChild(script);
+                } catch (e) {
+                    console.error('Ad loading error:', e);
+                }
+            });
+        };
+        script.onerror = function() {
+            showAdPlaceholders();
+        };
+        document.head.appendChild(script);
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        if (window.ADS_CONFIG.enabled) {
+            loadGoogleAds();
+        } else {
+            showAdPlaceholders();
         }
+    });
 
         // Coupons data and functionality
         const coupons = [
