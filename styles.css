@@ -1,4 +1,4 @@
-        :root {
+:root {
             --primary: #c60000;
             --secondary: #181818;
             --accent: #292929;
@@ -776,4 +776,17 @@
                 font-size: 0.95rem;
                 padding: 10px 12px 10px 36px;
             }
+        }
+
+        .ad-container {
+            width: 100%;
+            min-width: 250px;
+            min-height: 100px;
+            margin: 25px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--accent);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
