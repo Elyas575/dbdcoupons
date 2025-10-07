@@ -778,17 +778,14 @@
             }
         }
 
-        .ad-container {
-            width: 100%;
+        .ad-container, .adsbygoogle, .sidebar-ad, .in-content-ad {
+            display: block;
             min-width: 250px;
             min-height: 100px;
-            margin: 25px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: var(--accent);
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            width: 100%;
+            margin: 16px auto;
+            text-align: center;
+            background: transparent;
         }
 
         .sidebar-ad,
