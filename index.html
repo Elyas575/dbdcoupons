@@ -312,35 +312,25 @@
             document.head.appendChild(script);
         }
 
-        function initializeAdSlotsWithDelay() {
-            const adContainers = document.querySelectorAll('.adsbygoogle');
-            console.log(`Found ${adContainers.length} ad containers`);
-            
-            // Load ads with staggered delays to avoid overwhelming AdSense
-            adContainers.forEach((ad, index) => {
-                setTimeout(() => {
-                    try {
-                        // Check if ad container is visible and has width
-                        const container = ad.parentElement;
-                        const rect = container.getBoundingClientRect();
-                        
-                        if (rect.width > 0 && rect.height > 0) {
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                            console.log(`Ad ${index + 1} initialized`);
-                        } else {
-                            console.log(`Ad ${index + 1} skipped - container not visible`);
-                            // Try again in 2 seconds
-                            setTimeout(() => {
-                                (adsbygoogle = window.adsbygoogle || []).push({});
-                            }, 2000);
-                        }
-                    } catch (e) {
-                        console.error(`Ad ${index + 1} loading error:`, e);
-                    }
-                }, index * 1000); // 1 second delay between each ad
-            });
-        }
-
+            function initializeAdSlotsWithDelay() {
+                const adContainers = document.querySelectorAll('.adsbygoogle');
+                console.log(`Found ${adContainers.length} ad containers`);
+                
+                // Check if ads are already loaded
+                const alreadyLoaded = document.querySelector('.adsbygoogle[data-adsbygoogle-status]');
+                if (alreadyLoaded) {
+                    console.log('Ads already loaded, skipping re-initialization');
+                    return;
+                }
+                
+                // Load all ads at once
+                try {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    console.log('Ads initialization started');
+                } catch (e) {
+                    console.error('Ad loading error:', e);
+                }
+            }
         // Your existing coupon data and functionality remains the same
     const coupons = [
             { title: "Horror Attraction Banner", desc: "Exclusive event reward.", code: "NIGHTSHIFT", expires: "Sept 25, 2025", daysLeft: 7, usesToday: 326, type: "cosmetic" },
