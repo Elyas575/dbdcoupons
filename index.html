@@ -834,7 +834,7 @@
 
     <div class="container">
         <!-- Top Banner Ad - NEW Display Ad -->
-        <div class="in-content-ad">
+        <div class="in-content-ad ad-container" style="min-width:250px;">
             <div class="ad-label">Advertisement</div>
             <ins class="adsbygoogle"
                  style="display:block"
@@ -842,6 +842,9 @@
                  data-ad-slot="6219261398"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
 
         <div class="main-content">
@@ -866,14 +869,25 @@
                 <div class="pagination" id="pagination"></div>
 
                 <!-- Multiplex Ad - Content Recommendations -->
-                <div class="multiplex-ad">
-                    <div class="ad-label">Recommended For You</div>
+                <div class="ad-container">
                     <ins class="adsbygoogle"
                          style="display:block"
-                         data-ad-format="autorelaxed"
                          data-ad-client="ca-pub-5027621324612932"
-                         data-ad-slot="6402260074"></ins>
+                         data-ad-slot="6402260074"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
                 </div>
+                <script>
+                    window.addEventListener('DOMContentLoaded', function() {
+                        var adContainers = document.querySelectorAll('.ad-container');
+                        adContainers.forEach(function(container) {
+                            var ins = container.querySelector('ins.adsbygoogle');
+                            if (ins && container.offsetWidth >= 250) {
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            }
+                        });
+                    });
+                </script>
 
                 <div class="content-section">
                     <h2 id="Twitch_Drops" class="section-title">Dead by Daylight Twitch Drops Event</h2>
@@ -904,7 +918,7 @@
                 </div>
                 
                 <!-- In-Article Ad - NEW In-article Ad -->
-                <div class="in-content-ad">
+                <div class="in-content-ad ad-container" style="min-width:250px;">
                     <div class="ad-label">Advertisement</div>
                     <ins class="adsbygoogle"
                          style="display:block; text-align:center;"
@@ -912,6 +926,9 @@
                          data-ad-format="fluid"
                          data-ad-client="ca-pub-5027621324612932"
                          data-ad-slot="9503189840"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
 
                 <div class="content-section">
@@ -944,13 +961,16 @@
                 </div>
 
                 <!-- Multiplex Ad - Content Recommendations -->
-                <div class="multiplex-ad">
+                <div class="multiplex-ad ad-container" style="min-width:250px;">
                     <div class="ad-label">You Might Like</div>
                     <ins class="adsbygoogle"
                          style="display:block"
                          data-ad-format="autorelaxed"
                          data-ad-client="ca-pub-5027621324612932"
                          data-ad-slot="6402260074"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
 
                 
@@ -1035,7 +1055,7 @@
             <!-- Right Sidebar with Ads -->
             <div class="sidebar">
                 <!-- Sidebar Ad 1 - NEW Display Ad -->
-                <div class="sidebar-ad">
+                <div class="sidebar-ad ad-container" style="min-width:250px;">
                     <div class="ad-label">Advertisement</div>
                     <ins class="adsbygoogle"
                          style="display:block"
@@ -1043,10 +1063,13 @@
                          data-ad-slot="7340771375"
                          data-ad-format="auto"
                          data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
                 
                 <!-- Sidebar Ad 2 - NEW In-feed Ad -->
-                <div class="sidebar-ad">
+                <div class="sidebar-ad ad-container" style="min-width:250px;">
                     <div class="ad-label">Advertisement</div>
                     <ins class="adsbygoogle"
                          style="display:block"
@@ -1054,10 +1077,13 @@
                          data-ad-layout-key="-gw-3+1f-3d+2z"
                          data-ad-client="ca-pub-5027621324612932"
                          data-ad-slot="7149081177"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
                 
                 <!-- Sidebar Ad 3 - NEW Display Ad -->
-                <div class="sidebar-ad">
+                <div class="sidebar-ad ad-container" style="min-width:250px;">
                     <div class="ad-label">Advertisement</div>
                     <ins class="adsbygoogle"
                          style="display:block"
@@ -1065,16 +1091,22 @@
                          data-ad-slot="5472429580"
                          data-ad-format="auto"
                          data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
                 
                 <!-- Sidebar Ad 4 - Multiplex Ad -->
-                <div class="sidebar-ad">
+                <div class="sidebar-ad ad-container" style="min-width:250px;">
                     <div class="ad-label">Sponsored Content</div>
                     <ins class="adsbygoogle"
                          style="display:block"
                          data-ad-format="autorelaxed"
                          data-ad-client="ca-pub-5027621324612932"
                          data-ad-slot="6402260074"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
             </div>
         </div>
