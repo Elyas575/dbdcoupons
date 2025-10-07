@@ -1,4 +1,4 @@
-:root {
+        :root {
             --primary: #c60000;
             --secondary: #181818;
             --accent: #292929;
@@ -447,6 +447,8 @@
             border-radius: 6px;
             padding: 15px;
             transition: transform 0.3s;
+            width: 100%;
+            min-width: 250px;
         }
 
         .sidebar-ad:hover {
@@ -480,6 +482,8 @@
             justify-content: center;
             align-items: center;
             transition: transform 0.3s;
+            width: 100%;
+            min-width: 250px;
         }
 
         .in-content-ad:hover {
@@ -493,6 +497,8 @@
             padding: 15px;
             margin: 1.5rem 0;
             border: 1px solid #333;
+            width: 100%;
+            min-width: 250px;
         }
 
         /* FAQ */
@@ -601,6 +607,11 @@
             padding: 40px 20px;
             text-align: center;
             color: var(--muted);
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .ad-placeholder i {
@@ -778,22 +789,41 @@
             }
         }
 
-        .ad-container, .adsbygoogle, .sidebar-ad, .in-content-ad {
-            display: block;
-            min-width: 250px;
-            min-height: 100px;
-            width: 100%;
-            margin: 16px auto;
-            text-align: center;
-            background: transparent;
+        /* User-friendly ad spacing */
+        .ad-section {
+            margin: 2rem 0;
+            padding: 1rem 0;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
         }
 
-        .sidebar-ad,
-        .in-content-ad {
-            min-width: 250px;
-            min-height: 100px;
+        .ad-note {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        /* Image styling */
+        .content-image {
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            max-width: 800px;
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        /* Ad container fixes */
+        .ad-container {
+            width: 100%;
+            min-width: 250px;
+            display: block;
+        }
+
+        /* Ensure ads have proper dimensions */
+        ins.adsbygoogle {
+            display: block !important;
+            width: 100% !important;
         }
