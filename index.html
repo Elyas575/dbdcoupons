@@ -806,6 +806,16 @@
             margin-top: 0.5rem;
             font-style: italic;
         }
+
+        /* Image styling */
+        .content-image {
+            width: 100%;
+            max-width: 800px;
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
     </style>
 </head>
 <body>
@@ -835,15 +845,14 @@
     <div class="container">
         <!-- Top Banner Ad - NEW Display Ad -->
         <div class="in-content-ad ad-container" style="min-width:250px;">
-    <div class="ad-label">Advertisement</div>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-5027621324612932"
-         data-ad-slot="6219261398"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <!-- Inline ad script removed -->
-</div>
+            <div class="ad-label">Advertisement</div>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5027621324612932"
+                 data-ad-slot="6219261398"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+        </div>
 
         <div class="main-content">
             <div class="content-area">
@@ -867,25 +876,14 @@
                 <div class="pagination" id="pagination"></div>
 
                 <!-- Multiplex Ad - Content Recommendations -->
-                <div class="ad-container">
+                <div class="multiplex-ad ad-container" style="min-width:250px;">
+                    <div class="ad-label">You Might Like</div>
                     <ins class="adsbygoogle"
                          style="display:block"
+                         data-ad-format="autorelaxed"
                          data-ad-client="ca-pub-5027621324612932"
-                         data-ad-slot="6402260074"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
+                         data-ad-slot="6402260074"></ins>
                 </div>
-                <script>
-                    window.addEventListener('DOMContentLoaded', function() {
-                        var adContainers = document.querySelectorAll('.ad-container');
-                        adContainers.forEach(function(container) {
-                            var ins = container.querySelector('ins.adsbygoogle');
-                            if (ins && container.offsetWidth >= 250) {
-                                (adsbygoogle = window.adsbygoogle || []).push({});
-                            }
-                        });
-                    });
-                </script>
 
                 <div class="content-section">
                     <h2 id="Twitch_Drops" class="section-title">Dead by Daylight Twitch Drops Event</h2>
@@ -924,9 +922,6 @@
                          data-ad-format="fluid"
                          data-ad-client="ca-pub-5027621324612932"
                          data-ad-slot="9503189840"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
                 </div>
 
                 <div class="content-section">
@@ -938,8 +933,6 @@
                         <li>Have Pyramid Head or Cheryl from the Silent Hill chapter unlocked</li>
                         <li>Equip either Pyramid Head or Cheryl as your character</li>
                         <li>Return to the main menu (the character must be visible in the lobby)</li>
-                        <img src="images/pyramidhead.jpg" alt="Dead by Daylight main menu lobby with Pyramid Head character visible." style="width:100%; max-width: 800px; display: block; margin: 0 auto 20px; padding:5px;">
-
                         <li>Enter the Konami code: Up (W), Up (W), Down (S), Down (S), Left (A), Right (D), Left (A), Right (D), Right Mouse Button, Left Mouse Button, Enter</li>
                         <li>If entered correctly, you'll hear unique DBD lobby music</li>
                         <li>The Vic Viper charm will now be available in your cosmetics</li>
@@ -954,28 +947,12 @@
                     
                     <h2 class="section-title">Recently Expired Codes</h2>
                     <p style="font-size: 0.9rem; color: var(--muted);">
-                        DBDBLUESKYJP | TheGrimoire | THRIVETOGETHER | DISCORD500 | LARACROFTINTHEFOG | ENTITIESGIFT | SHARDBOOST |  DISCORD500 | LAFOGATA2025 | LOVEISUNHOOKABLE | THEENTITYLOVESALL | ESCAPEWITHPRIDE | INTOTHERAINBOW25 | DEADBYPRIDE | BPF2019 |  | ROLLD20 | LUCKYBP2025 | DBDDAY2024 | DBDDMAYOKE | MAKEITREINDEER | NOVASCASAS | BLOODPINT | DROPCT | DROPDA | DROPWE | thedarklord | DROPSC | CN600K | DROPBH | DROPUAT | ARRAIALDBD24 | LARAINTHEFOG | STEELSERIESTR | UMINOHI2024 | LAFOGATA | THANKU24 | DROPMC | DROPOP | DNDBD20 | DROPTS | PROUDSUSIE | 100KSLAY | INFULLBLOOM | SPLENDID | DROPGV | DROPCH | DROPTT | KOINOBORI | BLOODFEST | BLOODYGREAT | DROPBP | DROPMED | AMD | KONTROLFREEK | STEELSERIES2024 | DROPFL | UNDYING | GOLDENDRAGON | LUCKYBP2024 | PAPERDRAGON | DRAGONYEAR | LIGHTSOUT | ALANWAKECHAPTER | DROPML | DROPMJ | DROPMH | CARNANEVOA24 | THANKYOUFOR60M | STEELSERIES | ELGATO | ALIENWARE | GFUEL | DBDDAY39 | DbDDayR5 | DbDDay2022 | DANKE | GAMSAHABNIDA | BOOP | BASTILLE23 | PARTYHATS | OCANADA | GETTHREADY | TIKTOK | TICKED | TRAPPER7 | DBD7 | HAPPYGW2023 | MASTERMAKER | NICE | SHOPPINGSPREE | NOTATRAP | HONORARYCUSTODIAN | HRVFANCLUB | METMYMAKER | LUCKYBP2023s | LUCKY | RABBIT | ICEYYOU | ONEMILLIONSOULS | WINNERWINNER | NOVAS | CHEGADAS | CELEBRANDO | UNSTABLE | VOID | RIFT | ENERGY | DEDOBAJP2022 | THREEWITCHES | DEDOBANOHI | BILIBILI300K | TOOTHFACE | FINN | SHARKY | BUBBLES | TWITCHRIVALSTW2022 | CAKEWALK | IGBPPARTY | BLOODBANK | THANKYOU | DOUBLERAINBOW | GETTHATBAG | BLUEBIRDBEEG | 59th39 | 78SNOXXG | AD800947-01A7-4DEF-81AD-40DDC501DE50 | ANNIVERSARYFRAGMENTS | AUSOME | BETTERTHANONE | BILIBILI200K | BOOP | BULLSHIRT | BYEBYE2020 | CAISHEN | CIPHERSALAD | DBDDAYJP2020 | DBDDAYJP2021 | DBDTHEBOARDGAME | DBDWEBSITE | DECIPHERSTRIKE | DIEHARDDIVA2022 | DISCORD150K | DISCORD200K | DJC2021 | DWIGHTCROW | EASYASABC | ENTITYDISPLEASED | ENTITYPLEASED | ENTITYSLITTLEHELPER | ETERNALBLIGHT | FD3EB91E-B741-454B-A5DD-BC8DA406F162 | FORHONOR | FRISKKUWURAWRXD2022 | FROSTYBLIGHT | FROSTYDEATH | FROSTYTWINS | FUKUHAUCHI | GIFTTHERIFT | GIGXLM3G | GOLDENBROS | HALLOWHOOPS | HAPPY1001 | HAPPYGOLDENWEEK2021 | HELLOTHERE | HENYANG | HISSANDHERS | HOLIDAYFORMAL | HOLIDAYSPECIAL | HOHOHO | INSERTCOIN | INTHISECONOMY | JAPAN300K | KENPOUKINENBI2021 | KODOMONOHI2021 | LANTERNFESTIVAL | LIGHTSCAMERABP | LIVEORDIE | LUCKYCHARM | LUCKYMONEY | LUNARNEWGEAR | METATRON | MIDORINOHI2021 | MILADYISSEVENFOOTTWO | MNOGO | MORICHRISTMAS | NAUGHTYSTOCKING | NEWYEARNEWENTITY | NICESTOCKING | NOTATRICK | OINKYOUNEEDISLOVE | ONLY5000 | OVER5000 | PATHFINDER | PIECEOFCAKE | RANKROULETTE | REVEALED | RIVALSJP | RIVALSKR | RIVALSTH | SCARYGOOD | SCREAMSTREAM | SEASONSBLEEDINGS | SNAPSNAP | SOITCHY | SWEETDREAMS | THISISACODE | TREATYOURSELF | TWITCHORTREAT | TWITTERLORGE | TWITTERSMOL | TWOSDAY | VK100K | VK130UP | WITCHPLEASE | YOUFOUNDME | ZARINOX
+                        DBDBLUESKYJP | TheGrimoire | THRIVETOGETHER | DISCORD500 | LARACROFTINTHEFOG | ENTITIESGIFT | SHARDBOOST | DISCORD500 | LAFOGATA2025 | LOVEISUNHOOKABLE | THEENTITYLOVESALL | ESCAPEWITHPRIDE | INTOTHERAINBOW25 | DEADBYPRIDE | BPF2019 | ROLLD20 | LUCKYBP2025 | DBDDAY2024 | DBDDMAYOKE | MAKEITREINDEER | NOVASCASAS | BLOODPINT | DROPCT | DROPDA | DROPWE | thedarklord | DROPSC | CN600K | DROPBH | DROPUAT | ARRAIALDBD24 | LARAINTHEFOG | STEELSERIESTR | UMINOHI2024 | LAFOGATA | THANKU24 | DROPMC | DROPOP | DNDBD20 | DROPTS | PROUDSUSIE | 100KSLAY | INFULLBLOOM | SPLENDID | DROPGV | DROPCH | DROPTT | KOINOBORI | BLOODFEST | BLOODYGREAT | DROPBP | DROPMED | AMD | KONTROLFREEK | STEELSERIES2024 | DROPFL | UNDYING | GOLDENDRAGON | LUCKYBP2024 | PAPERDRAGON | DRAGONYEAR | LIGHTSOUT | ALANWAKECHAPTER | DROPML | DROPMJ | DROPMH | CARNANEVOA24 | THANKYOUFOR60M | STEELSERIES | ELGATO | ALIENWARE | GFUEL | DBDDAY39 | DbDDayR5 | DbDDay2022 | DANKE | GAMSAHABNIDA | BOOP | BASTILLE23 | PARTYHATS | OCANADA | GETTHREADY | TIKTOK | TICKED | TRAPPER7 | DBD7 | HAPPYGW2023 | MASTERMAKER | NICE | SHOPPINGSPREE | NOTATRAP | HONORARYCUSTODIAN | HRVFANCLUB | METMYMAKER | LUCKYBP2023s | LUCKY | RABBIT | ICEYYOU | ONEMILLIONSOULS | WINNERWINNER | NOVAS | CHEGADAS | CELEBRANDO | UNSTABLE | VOID | RIFT | ENERGY | DEDOBAJP2022 | THREEWITCHES | DEDOBANOHI | BILIBILI300K | TOOTHFACE | FINN | SHARKY | BUBBLES | TWITCHRIVALSTW2022 | CAKEWALK | IGBPPARTY | BLOODBANK | THANKYOU | DOUBLERAINBOW | GETTHATBAG | BLUEBIRDBEEG | 59th39 | 78SNOXXG | AD800947-01A7-4DEF-81AD-40DDC501DE50 | ANNIVERSARYFRAGMENTS | AUSOME | BETTERTHANONE | BILIBILI200K | BOOP | BULLSHIRT | BYEBYE2020 | CAISHEN | CIPHERSALAD | DBDDAYJP2020 | DBDDAYJP2021 | DBDTHEBOARDGAME | DBDWEBSITE | DECIPHERSTRIKE | DIEHARDDIVA2022 | DISCORD150K | DISCORD200K | DJC2021 | DWIGHTCROW | EASYASABC | ENTITYDISPLEASED | ENTITYPLEASED | ENTITYSLITTLEHELPER | ETERNALBLIGHT | FD3EB91E-B741-454B-A5DD-BC8DA406F162 | FORHONOR | FRISKKUWURAWRXD2022 | FROSTYBLIGHT | FROSTYDEATH | FROSTYTWINS | FUKUHAUCHI | GIFTTHERIFT | GIGXLM3G | GOLDENBROS | HALLOWHOOPS | HAPPY1001 | HAPPYGOLDENWEEK2021 | HELLOTHERE | HENYANG | HISSANDHERS | HOLIDAYFORMAL | HOLIDAYSPECIAL | HOHOHO | INSERTCOIN | INTHISECONOMY | JAPAN300K | KENPOUKINENBI2021 | KODOMONOHI2021 | LANTERNFESTIVAL | LIGHTSCAMERABP | LIVEORDIE | LUCKYCHARM | LUCKYMONEY | LUNARNEWGEAR | METATRON | MIDORINOHI2021 | MILADYISSEVENFOOTTWO | MNOGO | MORICHRISTMAS | NAUGHTYSTOCKING | NEWYEARNEWENTITY | NICESTOCKING | NOTATRICK | OINKYOUNEEDISLOVE | ONLY5000 | OVER5000 | PATHFINDER | PIECEOFCAKE | RANKROULETTE | REVEALED | RIVALSJP | RIVALSKR | RIVALSTH | SCARYGOOD | SCREAMSTREAM | SEASONSBLEEDINGS | SNAPSNAP | SOITCHY | SWEETDREAMS | THISISACODE | TREATYOURSELF | TWITCHORTREAT | TWITTERLORGE | TWITTERSMOL | TWOSDAY | VK100K | VK130UP | WITCHPLEASE | YOUFOUNDME | ZARINOX
                     </p>
                 </div>
 
-                <!-- Multiplex Ad - Content Recommendations -->
-                <div class="multiplex-ad ad-container" style="min-width:250px;">
-                    <div class="ad-label">You Might Like</div>
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-format="autorelaxed"
-                         data-ad-client="ca-pub-5027621324612932"
-                         data-ad-slot="6402260074"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-
-                
                 <div class="content-section">
                     <h2 id="how-to-redeem" class="section-title">How to redeem</h2>
-                        <img src="images/redeem-dbd-code.jpg" alt="Dead by Daylight main menu lobby with Pyramid Head character visible." style="width:100%; max-width: 800px; display: block; margin: 0 auto 20px; padding:5px;">
-
                     <p>Redeeming codes in Dead by Daylight is simple. Follow these steps: </p>
                     <ol>
                         <li>Launch Dead by Daylight on your platform (PC, Console)</li>
@@ -983,16 +960,10 @@
                         <li>Select the "Redeem Code" option</li>
                         <li>Enter the code exactly as shown (they're case-sensitive!)</li>
                         <li>Confirm and enjoy your rewards!</li>
-                        <li>Note: Some codes may expire quickly or be region locked. We try to note any restrictions in the code description.</li>
                     </ol>
-      
                     <p style="color: var(--muted); font-style: italic;">Note: Some codes may expire quickly or be region locked. We try to note any restrictions in the code description.</p>
-                    
-                    <h2 class="section-title">Recently Expired Codes</h2>
-                    <p style="font-size: 0.9rem; color: var(--muted);">
-                       TheGrimoire | THRIVETOGETHER | DISCORD500 | LARACROFTINTHEFOG | ENTITIESGIFT | SHARDBOOST |  DISCORD500 | LAFOGATA2025 | LOVEISUNHOOKABLE | THEENTITYLOVESALL | ESCAPEWITHPRIDE | INTOTHERAINBOW25 | DEADBYPRIDE | BPF2019 |  | ROLLD20 | LUCKYBP2025 | DBDDAY2024 | DBDDMAYOKE | MAKEITREINDEER | NOVASCASAS | BLOODPINT | DROPCT | DROPDA | DROPWE | thedarklord | DROPSC | CN600K | DROPBH | DROPUAT | ARRAIALDBD24 | LARAINTHEFOG | STEELSERIESTR | UMINOHI2024 | LAFOGATA | THANKU24 | DROPMC | DROPOP | DNDBD20 | DROPTS | PROUDSUSIE | 100KSLAY | INFULLBLOOM | SPLENDID | DROPGV | DROPCH | DROPTT | KOINOBORI | BLOODFEST | BLOODYGREAT | DROPBP | DROPMED | AMD | KONTROLFREEK | STEELSERIES2024 | DROPFL | UNDYING | GOLDENDRAGON | LUCKYBP2024 | PAPERDRAGON | DRAGONYEAR | LIGHTSOUT | ALANWAKECHAPTER | DROPML | DROPMJ | DROPMH | CARNANEVOA24 | THANKYOUFOR60M | STEELSERIES | ELGATO | ALIENWARE | GFUEL | DBDDAY39 | DbDDayR5 | DbDDay2022 | DANKE | GAMSAHABNIDA | BOOP | BASTILLE23 | PARTYHATS | OCANADA | GETTHREADY | TIKTOK | TICKED | TRAPPER7 | DBD7 | HAPPYGW2023 | MASTERMAKER | NICE | SHOPPINGSPREE | NOTATRAP | HONORARYCUSTODIAN | HRVFANCLUB | METMYMAKER | LUCKYBP2023s | LUCKY | RABBIT | ICEYYOU | ONEMILLIONSOULS | WINNERWINNER | NOVAS | CHEGADAS | CELEBRANDO | UNSTABLE | VOID | RIFT | ENERGY | DEDOBAJP2022 | THREEWITCHES | DEDOBANOHI | BILIBILI300K | TOOTHFACE | FINN | SHARKY | BUBBLES | TWITCHRIVALSTW2022 | CAKEWALK | IGBPPARTY | BLOODBANK | THANKYOU | DOUBLERAINBOW | GETTHATBAG | BLUEBIRDBEEG | 59th39 | 78SNOXXG | AD800947-01A7-4DEF-81AD-40DDC501DE50 | ANNIVERSARYFRAGMENTS | AUSOME | BETTERTHANONE | BILIBILI200K | BOOP | BULLSHIRT | BYEBYE2020 | CAISHEN | CIPHERSALAD | DBDDAYJP2020 | DBDDAYJP2021 | DBDTHEBOARDGAME | DBDWEBSITE | DECIPHERSTRIKE | DIEHARDDIVA2022 | DISCORD150K | DISCORD200K | DJC2021 | DWIGHTCROW | EASYASABC | ENTITYDISPLEASED | ENTITYPLEASED | ENTITYSLITTLEHELPER | ETERNALBLIGHT | FD3EB91E-B741-454B-A5DD-BC8DA406F162 | FORHONOR | FRISKKUWURAWRXD2022 | FROSTYBLIGHT | FROSTYDEATH | FROSTYTWINS | FUKUHAUCHI | GIFTTHERIFT | GIGXLM3G | GOLDENBROS | HALLOWHOOPS | HAPPY1001 | HAPPYGOLDENWEEK2021 | HELLOTHERE | HENYANG | HISSANDHERS | HOLIDAYFORMAL | HOLIDAYSPECIAL | HOHOHO | INSERTCOIN | INTHISECONOMY | JAPAN300K | KENPOUKINENBI2021 | KODOMONOHI2021 | LANTERNFESTIVAL | LIGHTSCAMERABP | LIVEORDIE | LUCKYCHARM | LUCKYMONEY | LUNARNEWGEAR | METATRON | MIDORINOHI2021 | MILADYISSEVENFOOTTWO | MNOGO | MORICHRISTMAS | NAUGHTYSTOCKING | NEWYEARNEWENTITY | NICESTOCKING | NOTATRICK | OINKYOUNEEDISLOVE | ONLY5000 | OVER5000 | PATHFINDER | PIECEOFCAKE | RANKROULETTE | REVEALED | RIVALSJP | RIVALSKR | RIVALSTH | SCARYGOOD | SCREAMSTREAM | SEASONSBLEEDINGS | SNAPSNAP | SOITCHY | SWEETDREAMS | THISISACODE | TREATYOURSELF | TWITCHORTREAT | TWITTERLORGE | TWITTERSMOL | TWOSDAY | VK100K | VK130UP | WITCHPLEASE | YOUFOUNDME | ZARINOX
-                    </p>
                 </div>
+
                 <h2 id="faq" class="section-title">Frequently Asked Questions</h2>
                 <div class="faq-item">
                     <div class="faq-question">Where do these DBD codes come from? <i class="fas fa-chevron-down"></i></div>
@@ -1061,9 +1032,6 @@
                          data-ad-slot="7340771375"
                          data-ad-format="auto"
                          data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
                 </div>
                 
                 <!-- Sidebar Ad 2 - NEW In-feed Ad -->
@@ -1075,9 +1043,6 @@
                          data-ad-layout-key="-gw-3+1f-3d+2z"
                          data-ad-client="ca-pub-5027621324612932"
                          data-ad-slot="7149081177"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
                 </div>
                 
                 <!-- Sidebar Ad 3 - NEW Display Ad -->
@@ -1089,9 +1054,6 @@
                          data-ad-slot="5472429580"
                          data-ad-format="auto"
                          data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
                 </div>
                 
                 <!-- Sidebar Ad 4 - Multiplex Ad -->
@@ -1102,9 +1064,6 @@
                          data-ad-format="autorelaxed"
                          data-ad-client="ca-pub-5027621324612932"
                          data-ad-slot="6402260074"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
                 </div>
             </div>
         </div>
@@ -1125,51 +1084,68 @@
     <div class="toast" id="toast">Code copied to clipboard!</div>
 
     <script>
-    window.ADS_CONFIG = {
-        enabled: window.location.hostname === "dbdcoupons.com",
-        clientId: "ca-pub-5027621324612932"
-    };
-    function showAdPlaceholders() {
-        document.querySelectorAll('.adsbygoogle').forEach((adSlot, index) => {
-            const slotId = adSlot.dataset.adSlot || 'unknown';
-            adSlot.innerHTML = `
-                <div class="ad-placeholder">
-                    <i class="fas fa-ad"></i>
-                    <p>Google Ad Placeholder</p>
-                    <small>Slot: ${slotId} | Ads appear in production</small>
-                </div>
-            `;
-        });
-    }
-    function loadGoogleAds() {
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + window.ADS_CONFIG.clientId;
-        script.crossOrigin = 'anonymous';
-        script.onload = function() {
-            document.querySelectorAll('.adsbygoogle').forEach(adSlot => {
+        // Ad Configuration
+        window.ADS_CONFIG = {
+            enabled: true,
+            clientId: 'ca-pub-5027621324612932',
+            adSlots: {
+                display: '5494268471',
+                inFeed: '7149081177',
+                multiplex: '6402260074'
+            }
+        };
+
+        function initializeAds() {
+            // Don't load real ads on localhost
+            if (window.location.hostname === 'localhost' || 
+                window.location.hostname === '127.0.0.1') {
+                
+                console.log('Running locally - showing ad placeholders');
+                showAdPlaceholders();
+                return;
+            }
+            
+            // Load real ads on production domain
+            if (window.ADS_CONFIG.enabled) {
+                loadGoogleAds();
+            } else {
+                showAdPlaceholders();
+            }
+        }
+
+        function showAdPlaceholders() {
+            document.querySelectorAll('.adsbygoogle').forEach((adSlot, index) => {
+                const slotId = adSlot.dataset.adSlot || 'unknown';
+                adSlot.innerHTML = `
+                    <div class="ad-placeholder">
+                        <i class="fas fa-ad"></i>
+                        <p>Google Ad Placeholder</p>
+                        <small>Slot: ${slotId} | Ads appear in production</small>
+                    </div>
+                `;
+            });
+        }
+
+        function loadGoogleAds() {
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + window.ADS_CONFIG.clientId;
+            script.crossOrigin = 'anonymous';
+            script.onload = function() {
+                console.log('Google Ads script loaded successfully');
+                // Initialize ads only once
                 try {
-                    if (!adSlot.hasAttribute('data-adsbygoogle-status') && adSlot.offsetWidth >= 250 && adSlot.offsetHeight > 0) {
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                        adSlot.setAttribute('data-adsbygoogle-status', 'initialized');
-                    }
+                    (adsbygoogle = window.adsbygoogle || []).push({});
                 } catch (e) {
                     console.error('Ad loading error:', e);
                 }
-            });
-        };
-        script.onerror = function() {
-            showAdPlaceholders();
-        };
-        document.head.appendChild(script);
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-        if (window.ADS_CONFIG.enabled) {
-            loadGoogleAds();
-        } else {
-            showAdPlaceholders();
+            };
+            script.onerror = function() {
+                console.error('Failed to load Google Ads script');
+                showAdPlaceholders();
+            };
+            document.head.appendChild(script);
         }
-    });
 
         // Coupons data and functionality
         const coupons = [
@@ -1383,13 +1359,6 @@
             renderCoupons(coupons);
             searchInput.addEventListener("input", searchCoupons);
         });
-
-
-
-        console.log('AdSense Status:');
-console.log('- Domain:', window.location.hostname);
-console.log('- AdsbyGoogle loaded:', typeof window.adsbygoogle !== 'undefined');
-console.log('- Ad containers found:', document.querySelectorAll('.adsbygoogle').length);
     </script>
 </body>
 </html>
