@@ -37,7 +37,7 @@
     </section>
 
     <div class="container">
-        <!-- Top Banner Ad - NEW Display Ad -->
+        <!-- Top Banner Ad - Keep this one -->
         <div class="in-content-ad ad-container">
             <div class="ad-label">Advertisement</div>
             <ins class="adsbygoogle"
@@ -69,7 +69,7 @@
 
                 <div class="pagination" id="pagination"></div>
 
-                <!-- Multiplex Ad - Content Recommendations -->
+                <!-- Multiplex Ad - Keep this one -->
                 <div class="multiplex-ad ad-container">
                     <div class="ad-label">You Might Like</div>
                     <ins class="adsbygoogle"
@@ -107,7 +107,7 @@
                     <p style="color: var(--muted); font-style: italic;">Note: Make sure to claim each reward on Twitch before the event ends on October 7. Progress is cumulative, so you'll unlock all rewards by watching for 6 hours total.</p>
                 </div>
                 
-                <!-- In-Article Ad - NEW In-article Ad -->
+                <!-- In-Article Ad - Keep this one -->
                 <div class="in-content-ad ad-container">
                     <div class="ad-label">Advertisement</div>
                     <ins class="adsbygoogle"
@@ -216,9 +216,9 @@
                 </div>
             </div>
 
-            <!-- Right Sidebar with Ads -->
+            <!-- Right Sidebar with Ads - REDUCED from 4 to 2 ads -->
             <div class="sidebar">
-                <!-- Sidebar Ad 1 - NEW Display Ad -->
+                <!-- Sidebar Ad 1 - Keep this one -->
                 <div class="sidebar-ad ad-container">
                     <div class="ad-label">Advertisement</div>
                     <ins class="adsbygoogle"
@@ -229,29 +229,7 @@
                          data-full-width-responsive="true"></ins>
                 </div>
                 
-                <!-- Sidebar Ad 2 - NEW In-feed Ad -->
-                <div class="sidebar-ad ad-container">
-                    <div class="ad-label">Advertisement</div>
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-format="fluid"
-                         data-ad-layout-key="-gw-3+1f-3d+2z"
-                         data-ad-client="ca-pub-5027621324612932"
-                         data-ad-slot="7149081177"></ins>
-                </div>
-                
-                <!-- Sidebar Ad 3 - NEW Display Ad -->
-                <div class="sidebar-ad ad-container">
-                    <div class="ad-label">Advertisement</div>
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-5027621324612932"
-                         data-ad-slot="5472429580"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
-                </div>
-                
-                <!-- Sidebar Ad 4 - Multiplex Ad -->
+                <!-- Sidebar Ad 4 - Keep this one (Multiplex) -->
                 <div class="sidebar-ad ad-container">
                     <div class="ad-label">Sponsored Content</div>
                     <ins class="adsbygoogle"
@@ -260,6 +238,7 @@
                          data-ad-client="ca-pub-5027621324612932"
                          data-ad-slot="6402260074"></ins>
                 </div>
+                <!-- REMOVED the other two sidebar ads -->
             </div>
         </div>
     </div>
@@ -282,12 +261,7 @@
         // Ad Configuration
         window.ADS_CONFIG = {
             enabled: true,
-            clientId: 'ca-pub-5027621324612932',
-            adSlots: {
-                display: '5494268471',
-                inFeed: '7149081177',
-                multiplex: '6402260074'
-            }
+            clientId: 'ca-pub-5027621324612932'
         };
 
         function initializeAds() {
@@ -328,12 +302,8 @@
             script.crossOrigin = 'anonymous';
             script.onload = function() {
                 console.log('Google Ads script loaded successfully');
-                // Wait for DOM to be fully ready before loading ads
-                if (document.readyState === 'loading') {
-                    document.addEventListener('DOMContentLoaded', initializeAdSlots);
-                } else {
-                    initializeAdSlots();
-                }
+                // Use improved ad loading with delays
+                initializeAdSlotsWithDelay();
             };
             script.onerror = function() {
                 console.error('Failed to load Google Ads script');
@@ -342,20 +312,37 @@
             document.head.appendChild(script);
         }
 
-        function initializeAdSlots() {
-            // Initialize ads with a small delay to ensure containers are rendered
-            setTimeout(() => {
-                try {
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    console.log('AdSense ads initialized successfully');
-                } catch (e) {
-                    console.error('Ad loading error:', e);
-                }
-            }, 100);
+        function initializeAdSlotsWithDelay() {
+            const adContainers = document.querySelectorAll('.adsbygoogle');
+            console.log(`Found ${adContainers.length} ad containers`);
+            
+            // Load ads with staggered delays to avoid overwhelming AdSense
+            adContainers.forEach((ad, index) => {
+                setTimeout(() => {
+                    try {
+                        // Check if ad container is visible and has width
+                        const container = ad.parentElement;
+                        const rect = container.getBoundingClientRect();
+                        
+                        if (rect.width > 0 && rect.height > 0) {
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                            console.log(`Ad ${index + 1} initialized`);
+                        } else {
+                            console.log(`Ad ${index + 1} skipped - container not visible`);
+                            // Try again in 2 seconds
+                            setTimeout(() => {
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            }, 2000);
+                        }
+                    } catch (e) {
+                        console.error(`Ad ${index + 1} loading error:`, e);
+                    }
+                }, index * 1000); // 1 second delay between each ad
+            });
         }
 
-        // Coupons data and functionality
-        const coupons = [
+        // Your existing coupon data and functionality remains the same
+    const coupons = [
             { title: "Horror Attraction Banner", desc: "Exclusive event reward.", code: "NIGHTSHIFT", expires: "Sept 25, 2025", daysLeft: 7, usesToday: 326, type: "cosmetic" },
             { title: "Frosty Eyes Killer Cosmetics", desc: "For all killers.", code: "IFLOOKSCOULDCHILL", expires: "Oct 10, 2025", daysLeft: 22, usesToday: 718, type: "cosmetic" },
             { title: "4th and 5th Anniversary crowns", desc: "Crown of the Entity", code: "PARTYHATS24", expires: "Oct 10, 2025", daysLeft: 22, usesToday: 718, type: "cosmetic" },
